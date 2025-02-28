@@ -22,7 +22,7 @@ var marker;
 async function ip() {
     try {
         const inputValue = input.value || "157.49.105.111"; // Default to a known IP if input is empty
-        const response = await fetch(`http://ip-api.com/json/${inputValue}`);
+        const response = await fetch(`https://ip-api.com/json/${inputValue}`);
         
         if (!response.ok) {
             throw new Error("Could not fetch API");
