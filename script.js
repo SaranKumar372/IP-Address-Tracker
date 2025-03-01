@@ -5,6 +5,7 @@ let userLocation = document.querySelector(".loc");
 let timezone = document.querySelector(".time");
 let isp = document.querySelector(".risp");
 
+
 var map = L.map('map').setView([13.0895, 80.2739], 13);
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -28,6 +29,7 @@ async function ip() {
             throw new Error("Invalid IP address or domain");
         }
 
+        // Update the UI with fetched data
         ipaddress.innerHTML = data.ip;
         userLocation.innerHTML = `${data.location.city}, ${data.location.region}, ${data.location.country}`;
         timezone.innerHTML = `UTC ${data.location.timezone}`;
@@ -43,18 +45,18 @@ async function ip() {
         }
 
         marker = L.marker([latitude, longitude]).addTo(map)
-            .bindPopup(`<b>${data.city}, ${data.region}</b><br>${data.country}`)
+            .bindPopup(`<b>${data.location.city}, ${data.location.region}</b><br>${data.location.country}`)
             .openPopup();
         
 
     } catch (error) {
         console.error(error);
-        alert(error.message);
+        alert(error.message); 
     }
 }
 ip();
 
+
 button.addEventListener("click", function () {
     ip();
 });
-
