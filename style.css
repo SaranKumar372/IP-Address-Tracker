@@ -11,14 +11,11 @@ body {
     text-align: center;
 }
 
-.heading,heading {
+.heading,heading,input,button {
     font-size: 1em;
 }
 .result {
     font-size: 1.5em;
-}
-input,button {
-    font-size: 1em;
 }
 
 h1 {
@@ -59,11 +56,8 @@ section {
     background: white;
     border-radius: 1em;
     z-index: 10;
-
-
 }
 section > div {
-
     border-right:1px solid hsl(0, 0%, 59%);
 }
 .isp {
@@ -92,20 +86,17 @@ section > div {
         background-image: url("./images/pattern-bg-mobile.png");
         background-size: 100vw 80vh;
     }
-    .heading,heading {
+    .heading,heading,input,button {
         font-size: 1em;
     }
     .result {
-        font-size: 1em;
-    }
-    input,button {
-        font-size: 1em;
-    }
-    h1 {
-        padding:0.5em;
+        font-size: 1.5em;
     }
     input {
         width:80vw;
+    }
+    input,button {
+        margin-bottom:1em;
     }
 
     section {
@@ -120,5 +111,5 @@ section > div {
     }
     #map {
         height:100vh;
-    }
+    }    
 }
