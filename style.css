@@ -79,11 +79,11 @@ section > div {
 } 
 
 #map {
-    height:63vh;
+    height:65vh;
     width:100vw;
     position:relative;
     z-index: -5;
-    margin-top:-11em;
+    margin-top:-12em;
 }
 
 
@@ -118,6 +118,7 @@ section > div {
     section > div {
         border-right:none;
     }
-    
-    
+    #map {
+        height:100vh;
+    }
 }
